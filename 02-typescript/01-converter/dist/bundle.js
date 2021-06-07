@@ -16,7 +16,7 @@
   \*********************/
 /***/ (() => {
 
-eval("\n\n\n//# sourceURL=webpack://04-addition/./src/main.ts?");
+eval("\nconst fInput = document.querySelector('#F');\nconst cInput = document.querySelector('#C');\nconsole.log('auto updating sdfsd');\nif (!(fInput instanceof HTMLInputElement)) {\n    throw new Error(\"No input element with an id 'F' found\");\n}\nif (!(cInput instanceof HTMLInputElement)) {\n    throw new Error(\"No input element with an id 'C' found\");\n}\nfInput.addEventListener('input', () => {\n    cInput.value = ((parseInt(fInput.value) - 32) * 5 / 9).toString();\n});\ncInput.addEventListener('input', () => {\n    fInput.value = ((parseInt(cInput.value) - 32) * 5 / 9).toString();\n});\n\n\n//# sourceURL=webpack://01-conversion/./src/main.ts?");
 
 /***/ })
 
