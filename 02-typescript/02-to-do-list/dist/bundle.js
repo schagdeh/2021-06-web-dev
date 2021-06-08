@@ -16,7 +16,7 @@
   \*********************/
 /***/ (() => {
 
-eval("\n\n\n//# sourceURL=webpack://to-do-list/./src/main.ts?");
+eval("\nconst toDos = [\n    { title: 'TypeScript', done: true },\n    { title: 'ReactJS', done: true },\n    { title: 'NodeJS', done: false },\n];\n\n\n//# sourceURL=webpack://to-do-list/./src/main.ts?");
 
 /***/ })
 
