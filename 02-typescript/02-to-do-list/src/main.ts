@@ -12,19 +12,44 @@ type State = {
   done: boolean;
 }[];
 
+const checkboxInput = document.createElement('input');
+checkboxInput.setAttribute('type', 'checkbox');
+const boolCheckboxInput = checkboxInput.checked
+
 const toDoes: State = [
-  {title: 'TypeScript', done: true},
-  {title: 'ReactJS', done: true},
+  {title: 'TypeScript', done: false},
+  {title: 'ReactJS', done: false},
   {title: 'NodeJS', done: false},
   {title: 'ExpressJS', done: false},
-
 ] 
 
 const render = () => {
   appDiv.innerHTML = "";
 
   const toDoUl = document.createElement('ul');
-  toDoUl.setAttribute('class', 'ulStyle')
+  toDoUl.setAttribute('class', 'ulStyle');
+
+  
+  const checkboxInput = document.createElement('input');
+checkboxInput.setAttribute('type', 'checkbox');
+
+const todoInput = document.createElement('input');
+  todoInput.setAttribute('type', 'text');
+
+  const btn = document.createElement('button');
+  btn.textContent = "Button"
+
+  btn.onclick = () => {
+    const userInput = todoInput.value
+    toDoes.push({
+      title: userInput,
+      done: false
+    })
+    render()
+  }
+
+  
+
   
 
   for(const toDo of toDoes) {
@@ -32,7 +57,8 @@ const render = () => {
     toDoLi.setAttribute('class', 'listStyle')
     const p = document.createElement('p');
     p.setAttribute('class', 'pStyle')
-    const span = document.createElement('span');
+    const span = document.createElement('input');
+    span.setAttribute('type', 'checkbox');
     toDoLi.appendChild(p)
     toDoLi.appendChild(span)
     p.textContent = toDo.title
@@ -42,6 +68,9 @@ const render = () => {
 
   }
   appDiv.appendChild(toDoUl)
+  appDiv.appendChild(todoInput)
+  appDiv.appendChild(btn)
+
 }; 
 
 render();
