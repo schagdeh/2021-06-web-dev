@@ -25,15 +25,15 @@ const App = (): JSX.Element => {
 	
 	const fToc = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setA(e.target.value)
-		const celsius = ((toInt(e.target.value) - 32) * 5/9).toFixed(2).toString()
+		const celsius = ((toInt(e.target.value) - 32) * 5/9).toFixed(2)
 		setB(celsius)
 		e.target.value === '' && setB('')
 		 return 
 	}
 	const cTof = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setB(e.target.value)
-		const celsius = ((toInt(e.target.value) * 9/5) + 32).toFixed(2).toString()
-		 setA(celsius)
+		const fahrenheit = ((toInt(e.target.value) * 9/5) + 32).toFixed(2)
+		 setA(fahrenheit)
 		 e.target.value === '' && setA('')
 		 return 
 	}
@@ -44,17 +44,15 @@ const App = (): JSX.Element => {
 				type="number"
 				value={a}
 				placeholder="°F"
-				onChange={(e) => fToc(e)}
+				onChange={fToc}
 			/>
 			{" + "}
 			<input
 				type="number"
 				value={b}
 				placeholder="°C"
-				onChange={(e) => cTof(e)}
+				onChange={cTof}
 			/>
-			{/* {" = "}
-			<span>{toInt(a) + toInt(b)}</span> */}
 		</main>
 	);
 };
