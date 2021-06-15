@@ -1,0 +1,49 @@
+body {
+	font-size: 1.6em;
+	line-height: 1.5;
+	margin: 0;
+	background: #343d46;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh;
+}
+.searchSection {
+	height: 5rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.searchBoxDiv {
+	background: black;
+	 width: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+
+.imageResultSection {
+	width: 100%;
+	height: 80vh;
+	margin-top: 8rem;
+	text-align: center;
+}
+li {
+
+	list-style-type: none;
+}
+.imageContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.imageDivLi {
+	padding: 1rem;
+}
