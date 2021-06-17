@@ -8,30 +8,32 @@ body {
 
 form {
   width: 20rem;
-  border: 5px solid #f1f1f1;
+  border: 1rem solid #f1f1f1;
   padding: 1rem;
+  border-radius: .5rem;
 }
 input {
   width: 100%;
-  padding: 16px 8px;
-  margin: 8px 0;
+  padding: 1rem .5rem;
+  margin: .5rem 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: .5rem;
 }
 
 button {
   background-color: #8ebf42;
   color: white;
-  padding: 14px 0;
-  margin: 10px 0;
+  padding: 1rem 0;
+  margin: .6rem 0;
   border: none;
   cursor: grabbing;
   width: 100%;
 }
 h1 {
   text-align: center;
-  font-size: 18;
+  font-size: 1rem;
 }
 button:hover {
   opacity: 0.8;
