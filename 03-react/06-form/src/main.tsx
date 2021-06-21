@@ -19,15 +19,13 @@ const App = (): JSX.Element => {
     age: 0,
   });
 
-  const handleSubmit = (e: React.MouseEvent) => {
-    e.preventDefault();
-    alert(user.firstName + " " + user.lastName + " " + user.age);
-  };
-
   return (
     <>
       <section>
-        <form>
+        <form onSubmit={e => {
+          e.preventDefault();
+          alert(user.firstName + " " + user.lastName + " " + user.age)
+        }}>
             <h1>Your Information</h1>
             <hr />
           <div>
@@ -61,7 +59,7 @@ const App = (): JSX.Element => {
             />
           </div>
 
-          <button onClick={handleSubmit}>submit</button>
+          <button>submit</button>
         </form>
       </section>
     </>
