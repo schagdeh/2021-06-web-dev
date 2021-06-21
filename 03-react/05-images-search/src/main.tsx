@@ -19,8 +19,9 @@ const App = (): JSX.Element => {
   const [text, setText] = useState("Type something to search for photos");
 
   const IMAGE_URL = new URL(
-    "https://pixabay.com/api/?key=22076185-8c3db306e8ad607345e161e46"
+    "https://pixabay.com/api/"
   );
+  IMAGE_URL.searchParams.append("key", "22076185-8c3db306e8ad607345e161e46");
   IMAGE_URL.searchParams.append("q", value);
   IMAGE_URL.searchParams.append("per_page", "10");
   IMAGE_URL.searchParams.append("image_type", "photo");
